@@ -295,7 +295,7 @@ impl ConfigFile {
   pub fn new(text: &str, path: &Path) -> Result<Self, AnyError> {
     let jsonc = jsonc_parser::parse_to_serde_value(text)?.unwrap();
     let json: ConfigFileJson = serde_json::from_value(jsonc)?;
-    json.test
+    json.test2
 
 
     Ok(Self {
